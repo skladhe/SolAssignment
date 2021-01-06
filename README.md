@@ -33,7 +33,7 @@ All unit test results are uploaded @ URL: https://github.com/skladhe/SolAssignme
 5. Create your own SQL Server database. 8
 6. Run the script mentioned @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/Database%20Schema%20along%20with%20Master%20Data%20Script.sql
 7. Replace the SQL Server name, database name, User name and password in the connection string of the App.Config file of "ProjAssignment" and "ProjDAL" projects
-  <add name="ECModel" connectionString="metadata=res://*/ECModel.csdl|res://*/ECModel.ssdl|res://*/ECModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source={**your sql server name**},1433;initial catalog={**your database name**};persist security info=True;user id={**your user name**};password={**your password**};MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  `<add name="ECModel" connectionString="metadata=res://*/ECModel.csdl|res://*/ECModel.ssdl|res://*/ECModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source={**your sql server name**},1433;initial catalog={**your database name**};persist security info=True;user id={**your user name**};password={**your password**};MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />`
  8. Build the solution
  9. Run the solution
  
