@@ -101,7 +101,7 @@ namespace ProjAssignment
                     {
                         item.Comment = AllConstants.QuantityNegative;
                         currentOrder.inValidItems.Add(item);
-                        msg = string.Format("Invalid Item found: Name {0} , Reason {1}", item.Name, AllConstants.QuantityNegative);
+                        msg = string.Format("Invalid Item found: Name {0} , Reason: {1}", item.Name, AllConstants.QuantityNegative);
                         logHelper.LogError(msg);
                         continue;
                         //throw new ItemNotFoundException();
@@ -110,7 +110,7 @@ namespace ProjAssignment
                     {
                         item.Comment = AllConstants.ItemNotFound;
                         currentOrder.inValidItems.Add(item);
-                        msg = string.Format("Invalid Item found: Name {0} , Reason {1}", item.Name, AllConstants.ItemNotFound);
+                        msg = string.Format("Invalid Item found: Name {0} , Reason: {1}", item.Name, AllConstants.ItemNotFound);
                         logHelper.LogError(msg);
                         continue;
                         //throw new ItemNotFoundException();
@@ -123,7 +123,7 @@ namespace ProjAssignment
                         {
                             item.Comment = AllConstants.InvalidOrderQuantity;
                             currentOrder.inValidItems.Add(item);
-                            msg = string.Format("Invalid Item found: Name {0} , Reason {1}", item.Name, AllConstants.InvalidOrderQuantity);
+                            msg = string.Format("Invalid Quantity for Item found: Name {0} , Reason {1}", item.Name, AllConstants.InvalidOrderQuantity);
                             logHelper.LogError(msg);
                             continue;
                             //throw new OrderQtyNotValidException();
