@@ -1,0 +1,12 @@
+2021-01-07 01:49:07.1289 | INFO | ProjAssignment.LoggingHelper | Order # 9415 processing started
+2021-01-07 01:49:16.0902 | INFO | ProjAssignment.LoggingHelper | Order # 9415 Validation Started
+2021-01-07 01:49:16.0902 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name Z , Reason: Item Not found
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 3
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 1
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Order # 9415 Validation Ended
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Order # 9415 Amount Calculation Started
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Item Name: A, Amount: 239.6
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Item Name: C, Amount: 107.47
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Item Name: B, Amount: 2796
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Order # 9415  Total Amount = 3143
+2021-01-07 01:49:16.0991 | INFO | ProjAssignment.LoggingHelper | Order # 9415 Ended
