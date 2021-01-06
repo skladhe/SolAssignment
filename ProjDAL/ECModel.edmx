@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MastProduct">
+          <Key>
+            <PropertyRef Name="ProdID" />
+          </Key>
+          <Property Name="ProdID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProdName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProdDesc" Type="nvarchar" MaxLength="500" />
+          <Property Name="UnitsInStock" Type="int" />
+          <Property Name="UnitOfMeasure" Type="nvarchar" MaxLength="30" />
+          <Property Name="UnitOfSales" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="ProdDiscounts">
+          <Key>
+            <PropertyRef Name="DiscID" />
+          </Key>
+          <Property Name="DiscID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProdID" Type="int" Nullable="false" />
+          <Property Name="DiscType" Type="nvarchar" MaxLength="100" />
+          <Property Name="DiscUnit" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="MinOrderQty" Type="int" />
+          <Property Name="DiscPriority" Type="int" Nullable="false" />
+          <Property Name="DiscDesc" Type="nvarchar" MaxLength="100" />
+          <Property Name="FixedPrice" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="ChargeForQty" Type="int" />
+          <Property Name="DiscPercent" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="ProdPricing">
+          <Key>
+            <PropertyRef Name="ProdPriceID" />
+          </Key>
+          <Property Name="ProdPriceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProdID" Type="int" Nullable="false" />
+          <Property Name="BasePrice" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Currency" Type="varchar" MaxLength="10" />
+          <Property Name="PromoOffer" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ProdDiscounts_ProdID">
+          <End Role="MastProduct" Type="Self.MastProduct" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProdDiscounts" Type="Self.ProdDiscounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MastProduct">
+              <PropertyRef Name="ProdID" />
+            </Principal>
+            <Dependent Role="ProdDiscounts">
+              <PropertyRef Name="ProdID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProdPricing_ProdID">
+          <End Role="MastProduct" Type="Self.MastProduct" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProdPricing" Type="Self.ProdPricing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MastProduct">
+              <PropertyRef Name="ProdID" />
+            </Principal>
+            <Dependent Role="ProdPricing">
+              <PropertyRef Name="ProdID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="MastProduct" EntityType="Self.MastProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProdDiscounts" EntityType="Self.ProdDiscounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProdPricing" EntityType="Self.ProdPricing" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ProdDiscounts_ProdID" Association="Self.FK_ProdDiscounts_ProdID">
+            <End Role="MastProduct" EntitySet="MastProduct" />
+            <End Role="ProdDiscounts" EntitySet="ProdDiscounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProdPricing_ProdID" Association="Self.FK_ProdPricing_ProdID">
+            <End Role="MastProduct" EntitySet="MastProduct" />
+            <End Role="ProdPricing" EntitySet="ProdPricing" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MastProduct">
+          <Key>
+            <PropertyRef Name="ProdID" />
+          </Key>
+          <Property Name="ProdID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProdDesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UnitsInStock" Type="Int32" />
+          <Property Name="UnitOfMeasure" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UnitOfSales" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProdDiscounts" Relationship="Self.FK_ProdDiscounts_ProdID" FromRole="MastProduct" ToRole="ProdDiscounts" />
+          <NavigationProperty Name="ProdPricings" Relationship="Self.FK_ProdPricing_ProdID" FromRole="MastProduct" ToRole="ProdPricing" />
+        </EntityType>
+        <EntityType Name="ProdDiscount">
+          <Key>
+            <PropertyRef Name="DiscID" />
+          </Key>
+          <Property Name="DiscID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="Int32" Nullable="false" />
+          <Property Name="DiscType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DiscUnit" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="MinOrderQty" Type="Int32" />
+          <Property Name="DiscPriority" Type="Int32" Nullable="false" />
+          <Property Name="DiscDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FixedPrice" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ChargeForQty" Type="Int32" />
+          <Property Name="DiscPercent" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="MastProduct" Relationship="Self.FK_ProdDiscounts_ProdID" FromRole="ProdDiscounts" ToRole="MastProduct" />
+        </EntityType>
+        <EntityType Name="ProdPricing">
+          <Key>
+            <PropertyRef Name="ProdPriceID" />
+          </Key>
+          <Property Name="ProdPriceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="Int32" Nullable="false" />
+          <Property Name="BasePrice" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Currency" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PromoOffer" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MastProduct" Relationship="Self.FK_ProdPricing_ProdID" FromRole="ProdPricing" ToRole="MastProduct" />
+        </EntityType>
+        <Association Name="FK_ProdDiscounts_ProdID">
+          <End Role="MastProduct" Type="Self.MastProduct" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProdDiscounts" Type="Self.ProdDiscount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MastProduct">
+              <PropertyRef Name="ProdID" />
+            </Principal>
+            <Dependent Role="ProdDiscounts">
+              <PropertyRef Name="ProdID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProdPricing_ProdID">
+          <End Role="MastProduct" Type="Self.MastProduct" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProdPricing" Type="Self.ProdPricing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MastProduct">
+              <PropertyRef Name="ProdID" />
+            </Principal>
+            <Dependent Role="ProdPricing">
+              <PropertyRef Name="ProdID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ECModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MastProducts" EntityType="Self.MastProduct" />
+          <EntitySet Name="ProdDiscounts" EntityType="Self.ProdDiscount" />
+          <EntitySet Name="ProdPricings" EntityType="Self.ProdPricing" />
+          <AssociationSet Name="FK_ProdDiscounts_ProdID" Association="Self.FK_ProdDiscounts_ProdID">
+            <End Role="MastProduct" EntitySet="MastProducts" />
+            <End Role="ProdDiscounts" EntitySet="ProdDiscounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProdPricing_ProdID" Association="Self.FK_ProdPricing_ProdID">
+            <End Role="MastProduct" EntitySet="MastProducts" />
+            <End Role="ProdPricing" EntitySet="ProdPricings" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ECModel">
+          <EntitySetMapping Name="MastProducts">
+            <EntityTypeMapping TypeName="Model.MastProduct">
+              <MappingFragment StoreEntitySet="MastProduct">
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdDesc" ColumnName="ProdDesc" />
+                <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+                <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+                <ScalarProperty Name="UnitOfSales" ColumnName="UnitOfSales" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProdDiscounts">
+            <EntityTypeMapping TypeName="Model.ProdDiscount">
+              <MappingFragment StoreEntitySet="ProdDiscounts">
+                <ScalarProperty Name="DiscID" ColumnName="DiscID" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="DiscType" ColumnName="DiscType" />
+                <ScalarProperty Name="DiscUnit" ColumnName="DiscUnit" />
+                <ScalarProperty Name="MinOrderQty" ColumnName="MinOrderQty" />
+                <ScalarProperty Name="DiscPriority" ColumnName="DiscPriority" />
+                <ScalarProperty Name="DiscDesc" ColumnName="DiscDesc" />
+                <ScalarProperty Name="FixedPrice" ColumnName="FixedPrice" />
+                <ScalarProperty Name="ChargeForQty" ColumnName="ChargeForQty" />
+                <ScalarProperty Name="DiscPercent" ColumnName="DiscPercent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProdPricings">
+            <EntityTypeMapping TypeName="Model.ProdPricing">
+              <MappingFragment StoreEntitySet="ProdPricing">
+                <ScalarProperty Name="ProdPriceID" ColumnName="ProdPriceID" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="PromoOffer" ColumnName="PromoOffer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
