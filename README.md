@@ -2,7 +2,7 @@
 
 
 # Technology Stack
- 1. Visual studio 2017 is used to develop this solution
+ 1. Visual studio 2017 
  2. .Net framework 7.1
  3. Azure SQL Server 
  4. NLOg
