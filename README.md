@@ -16,3 +16,5 @@
    a. The log file is created @ in the {shortdate} folder of "bin" folder of ProjAssignment project
 
 # Unit Tests
+All unit test results are uploaded @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/AssignLog-UnitTest.txt.log
+
