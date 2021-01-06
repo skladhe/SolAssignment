@@ -27,6 +27,17 @@ NLog is used for logging.
   The database creation script along with the sql statement for master data insertion is given in file https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/Database%20Schema%20along%20with%20Master%20Data%20Script.sql
 # Unit Tests
 All unit test results are uploaded @ URL: https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/AssignLog-UnitTest.txt.log
+The unit tests cover below given scenarios:
+1. Order with item 'A' - with differnt quantites ( Necessary to get promotional offer and without offer)
+1. Order with item 'B' - with differnt quantites  ( Eligible for 'Fixed price' and without it)
+3. Order with item 'C' - with differnt quantites  
+4. Order with all items
+5. Rounding of to whole 'NOK' of the total amount ( Ceiling condition)
+6. Rounding of to whole 'NOK' of the total amount ( Flooring condition)
+7. Order with item 'A' - with -ve quantity ( -Ve test case )
+8. Order with item 'A' - with fractional quantity (-Ve test case )
+9. Order with item 'Z' - which does not exist in inventory (-Ve test case )
+
 # Steps to Build Solution
 1. Download the Code
 2. Open in Visual Studio 2017. 
