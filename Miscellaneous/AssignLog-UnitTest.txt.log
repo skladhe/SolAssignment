@@ -1,0 +1,175 @@
+2021-01-07 01:44:53.4772 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_A_Qty1() 
+2021-01-07 01:44:56.3503 | INFO | ProjAssignment.LoggingHelper | Order # 58780 processing started
+2021-01-07 01:44:56.3503 | INFO | ProjAssignment.LoggingHelper | Order # 58780 Validation Started
+2021-01-07 01:44:56.3752 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:56.3752 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:56.3752 | INFO | ProjAssignment.LoggingHelper | Order # 58780 Validation Ended
+2021-01-07 01:44:56.3828 | INFO | ProjAssignment.LoggingHelper | Order # 58780 Amount Calculation Started
+2021-01-07 01:44:56.3828 | INFO | ProjAssignment.LoggingHelper | Item Name: A, Amount: 59.9
+2021-01-07 01:44:56.3969 | INFO | ProjAssignment.LoggingHelper | Order # 58780  Total Amount = 60
+2021-01-07 01:44:56.3969 | INFO | ProjAssignment.LoggingHelper | Order # 58780 Ended
+2021-01-07 01:44:56.3969 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_A_Qty1() 
+--------------------
+2021-01-07 01:44:56.4825 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_A_Qty10() 
+2021-01-07 01:44:56.5795 | INFO | ProjAssignment.LoggingHelper | Order # 99894 processing started
+2021-01-07 01:44:56.5795 | INFO | ProjAssignment.LoggingHelper | Order # 99894 Validation Started
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Order # 99894 Validation Ended
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Order # 99894 Amount Calculation Started
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Item Name: A, Amount: 419.3
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Order # 99894  Total Amount = 419
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | Order # 99894 Ended
+2021-01-07 01:44:56.5834 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_A_Qty10() 
+--------------------
+2021-01-07 01:44:56.5985 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_B_Qty1() 
+2021-01-07 01:44:56.6838 | INFO | ProjAssignment.LoggingHelper | Order # 94330 processing started
+2021-01-07 01:44:56.6838 | INFO | ProjAssignment.LoggingHelper | Order # 94330 Validation Started
+2021-01-07 01:44:56.6838 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:56.6838 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:56.6838 | INFO | ProjAssignment.LoggingHelper | Order # 94330 Validation Ended
+2021-01-07 01:44:56.6929 | INFO | ProjAssignment.LoggingHelper | Order # 94330 Amount Calculation Started
+2021-01-07 01:44:56.6929 | INFO | ProjAssignment.LoggingHelper | Item Name: B, Amount: 399
+2021-01-07 01:44:56.6929 | INFO | ProjAssignment.LoggingHelper | Order # 94330  Total Amount = 399
+2021-01-07 01:44:56.6929 | INFO | ProjAssignment.LoggingHelper | Order # 94330 Ended
+2021-01-07 01:44:56.6929 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_B_Qty1() 
+--------------------
+2021-01-07 01:44:56.6929 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_B_Qty5() 
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Order # 88766 processing started
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Order # 88766 Validation Started
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Order # 88766 Validation Ended
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Order # 88766 Amount Calculation Started
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Item Name: B, Amount: 1797
+2021-01-07 01:44:56.7902 | INFO | ProjAssignment.LoggingHelper | Order # 88766  Total Amount = 1797
+2021-01-07 01:44:56.8021 | INFO | ProjAssignment.LoggingHelper | Order # 88766 Ended
+2021-01-07 01:44:56.8021 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_B_Qty5() 
+--------------------
+2021-01-07 01:44:56.8021 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_C_Qty1() 
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Order # 35445 processing started
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Order # 35445 Validation Started
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Order # 35445 Validation Ended
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Order # 35445 Amount Calculation Started
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Item Name: C, Amount: 19.54
+2021-01-07 01:44:56.8977 | INFO | ProjAssignment.LoggingHelper | Order # 35445  Total Amount = 20
+2021-01-07 01:44:56.9120 | INFO | ProjAssignment.LoggingHelper | Order # 35445 Ended
+2021-01-07 01:44:56.9120 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_C_Qty1() 
+--------------------
+2021-01-07 01:44:56.9120 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestRoundOff_Ceiling() 
+2021-01-07 01:44:57.0190 | INFO | ProjAssignment.LoggingHelper | Order # 29881 processing started
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Order # 29881 Validation Started
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Order # 29881 Validation Ended
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Order # 29881 Amount Calculation Started
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Item Name: C, Amount: 19.54
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Order # 29881  Total Amount = 20
+2021-01-07 01:44:57.0221 | INFO | ProjAssignment.LoggingHelper | Order # 29881 Ended
+2021-01-07 01:44:57.0365 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestRoundOff_Ceiling() 
+--------------------
+2021-01-07 01:44:57.0365 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestRoundOff_Floor() 
+2021-01-07 01:44:57.1227 | INFO | ProjAssignment.LoggingHelper | Order # 76559 processing started
+2021-01-07 01:44:57.1227 | INFO | ProjAssignment.LoggingHelper | Order # 76559 Validation Started
+2021-01-07 01:44:57.1227 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:57.1227 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | Order # 76559 Validation Ended
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | Order # 76559 Amount Calculation Started
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | Item Name: C, Amount: 21.49
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | Order # 76559  Total Amount = 21
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | Order # 76559 Ended
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestRoundOff_Floor() 
+--------------------
+2021-01-07 01:44:57.1297 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_C_QtyFraction() 
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Order # 70995 processing started
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Order # 70995 Validation Started
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 1
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Order # 70995 Validation Ended
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Order # 70995 Amount Calculation Started
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Item Name: C, Amount: 29.31
+2021-01-07 01:44:57.2252 | INFO | ProjAssignment.LoggingHelper | Order # 70995  Total Amount = 29
+2021-01-07 01:44:57.2405 | INFO | ProjAssignment.LoggingHelper | Order # 70995 Ended
+2021-01-07 01:44:57.2405 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_C_QtyFraction() 
+--------------------
+2021-01-07 01:44:57.2405 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestItem_ABC_Together() 
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Order # 65431 processing started
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Order # 65431 Validation Started
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 3
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 0
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Order # 65431 Validation Ended
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Order # 65431 Amount Calculation Started
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Item Name: A, Amount: 299.5
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Item Name: B, Amount: 2397
+2021-01-07 01:44:57.3327 | INFO | ProjAssignment.LoggingHelper | Item Name: C, Amount: 19.54
+2021-01-07 01:44:57.3486 | INFO | ProjAssignment.LoggingHelper | Order # 65431  Total Amount = 2716
+2021-01-07 01:44:57.3486 | INFO | ProjAssignment.LoggingHelper | Order # 65431 Ended
+2021-01-07 01:44:57.3486 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestItem_ABC_Together() 
+--------------------
+2021-01-07 01:44:57.3486 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestInvalidItem() 
+2021-01-07 01:44:57.4434 | INFO | ProjAssignment.LoggingHelper | Order # 12111 processing started
+2021-01-07 01:44:57.4434 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Validation Started
+2021-01-07 01:44:57.4434 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name Z , Reason: Item Not found
+2021-01-07 01:44:57.4434 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 2
+2021-01-07 01:44:57.4434 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 1
+2021-01-07 01:44:57.4434 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Validation Ended
+2021-01-07 01:44:57.4434 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Amount Calculation Started
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Item Name: A, Amount: 239.6
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Item Name: B, Amount: 2796
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Order # 12111  Total Amount = 3036
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Ended
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Validation Started
+2021-01-07 01:44:57.4600 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name Z , Reason: Item Not found
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 2
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 1
+2021-01-07 01:44:57.4600 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Validation Ended
+2021-01-07 01:44:57.4743 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Amount Calculation Started
+2021-01-07 01:44:57.4743 | INFO | ProjAssignment.LoggingHelper | Item Name: A, Amount: 239.6
+2021-01-07 01:44:57.4743 | INFO | ProjAssignment.LoggingHelper | Item Name: B, Amount: 2796
+2021-01-07 01:44:57.4743 | INFO | ProjAssignment.LoggingHelper | Order # 12111  Total Amount = 3036
+2021-01-07 01:44:57.4743 | INFO | ProjAssignment.LoggingHelper | Order # 12111 Ended
+2021-01-07 01:44:57.4743 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestInvalidItem() 
+--------------------
+2021-01-07 01:44:57.4962 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestAllInvalidItem() 
+2021-01-07 01:44:57.5766 | INFO | ProjAssignment.LoggingHelper | Order # 42426 processing started
+2021-01-07 01:44:57.5766 | INFO | ProjAssignment.LoggingHelper | Order # 42426 Validation Started
+2021-01-07 01:44:57.5766 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name AA , Reason: Item Not found
+2021-01-07 01:44:57.5830 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name BB , Reason: Item Not found
+2021-01-07 01:44:57.5830 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name Z , Reason: Item Not found
+2021-01-07 01:44:57.5830 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 0
+2021-01-07 01:44:57.5830 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 3
+2021-01-07 01:44:57.5830 | INFO | ProjAssignment.LoggingHelper | Order # 42426 Validation Ended
+2021-01-07 01:44:57.5830 | INFO | ProjAssignment.LoggingHelper | Order # 42426 Validation Started
+2021-01-07 01:44:57.5830 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name AA , Reason: Item Not found
+2021-01-07 01:44:57.5830 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name BB , Reason: Item Not found
+2021-01-07 01:44:57.5830 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name Z , Reason: Item Not found
+2021-01-07 01:44:57.5985 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 0
+2021-01-07 01:44:57.5985 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 3
+2021-01-07 01:44:57.5985 | INFO | ProjAssignment.LoggingHelper | Order # 42426 Validation Ended
+2021-01-07 01:44:57.5985 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestAllInvalidItem() 
+--------------------
+2021-01-07 01:44:57.5985 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestInvalidItem2() 
+2021-01-07 01:44:57.7035 | INFO | ProjAssignment.LoggingHelper | Order # 72742 processing started
+2021-01-07 01:44:57.7035 | INFO | ProjAssignment.LoggingHelper | Order # 72742 Validation Started
+2021-01-07 01:44:57.7035 | ERROR | ProjAssignment.LoggingHelper | Invalid Quantity for Item found: Name A , Reason Invalid Order Quantity
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 0
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 1
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Order # 72742 Validation Ended
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Order # 72742 Validation Started
+2021-01-07 01:44:57.7085 | ERROR | ProjAssignment.LoggingHelper | Invalid Quantity for Item found: Name A , Reason Invalid Order Quantity
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 0
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 1
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | Order # 72742 Validation Ended
+2021-01-07 01:44:57.7085 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestInvalidItem2() 
+--------------------
+2021-01-07 01:44:57.7246 | INFO | ProjAssignment.LoggingHelper | Start of Unit Test : Void TestQuantityNegative() 
+2021-01-07 01:44:57.8071 | INFO | ProjAssignment.LoggingHelper | Order # 67178 processing started
+2021-01-07 01:44:57.8071 | INFO | ProjAssignment.LoggingHelper | Order # 67178 Validation Started
+2021-01-07 01:44:57.8071 | ERROR | ProjAssignment.LoggingHelper | Invalid Item found: Name A , Reason: Quantiy is Negative
+2021-01-07 01:44:57.8071 | INFO | ProjAssignment.LoggingHelper | Num of valid items: 0
+2021-01-07 01:44:57.8071 | INFO | ProjAssignment.LoggingHelper | Num of In-valid items: 1
+2021-01-07 01:44:57.8071 | INFO | ProjAssignment.LoggingHelper | Order # 67178 Validation Ended
+2021-01-07 01:44:57.8180 | INFO | ProjAssignment.LoggingHelper | End of Unit Test : Void TestQuantityNegative() 
+--------------------
