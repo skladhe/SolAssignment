@@ -17,6 +17,7 @@
 
 # Database diagram
   The database diagram is uploaded @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/EC%20Database%20diagram.PNG
+  The script for database creation along with the sql statement for master data insertion is given in file https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/Database%20Schema%20along%20with%20Master%20Data%20Script.sql
 # Unit Tests
 All unit test results are uploaded @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/AssignLog-UnitTest.txt.log
 
