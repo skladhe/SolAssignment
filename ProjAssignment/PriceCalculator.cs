@@ -27,11 +27,18 @@ namespace ProjAssignment
 
         private void PopulateAllTables()
         {
-            string connString = ConfigurationManager.ConnectionStrings["ECModel"].ToString();
-            objEc = new ECModel(connString);
-            prodDiscounts = objEc.ProdDiscounts.ToList<ProdDiscount>();
-            prodMast = objEc.MastProducts.ToList<MastProduct>();
-            prodPricing = objEc.ProdPricings.ToList<ProdPricing>();
+            try
+            {
+                string connString = ConfigurationManager.ConnectionStrings["ECModel"].ToString();
+                objEc = new ECModel(connString);
+                prodDiscounts = objEc.ProdDiscounts.ToList<ProdDiscount>();
+                prodMast = objEc.MastProducts.ToList<MastProduct>();
+                prodPricing = objEc.ProdPricings.ToList<ProdPricing>();
+            }
+            catch(Exception ex)
+            {
+                logHelper.LogException(LogLevel.Error, ex, ex.Message);
+            }
         }
 
         public long CalAmountAllItems(OrderDetails orderDetails)
@@ -108,16 +115,14 @@ namespace ProjAssignment
                             //throw new OrderQtyNotValidException();
                         }
                     }
-                  
                     item.ProdID = intProdId;
                     currentOrder.validItems.Add(item);
                 }
             }
             catch (Exception ex)
             {
-                msg = ex.InnerException.ToString();
-                logHelper.LogError(msg);
-                throw new ItemNotFoundException();
+                msg = ex.Message;
+                logHelper.LogException(LogLevel.Error, ex, msg);
             }
             return currentOrder;
         }

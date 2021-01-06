@@ -32,7 +32,6 @@ namespace ProjAssignment
     {
         public long itemNo;
         public long ProdID;
-
         public string Name;
         public float Quantity;
         public double Amount;

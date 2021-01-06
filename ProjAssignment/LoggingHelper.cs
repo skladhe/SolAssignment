@@ -21,12 +21,12 @@ namespace ProjAssignment
         public void LogError(string message)
         {
             log.Error(message);
-
+            
         }
 
-        public void LogException(LogLevel level, string message, Exception ex)
+        public void LogException(LogLevel level, Exception ex, string message)
         {
-            log.Log(level, ex, message);
+            log.Error(ex,message );
         }
 
     }

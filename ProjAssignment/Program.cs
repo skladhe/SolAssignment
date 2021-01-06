@@ -33,20 +33,23 @@ namespace ProjAssignment
 
                 msg = string.Format(string.Format("Num of valid items: {0}", orderDetails.validItems.Count));
                 Console.WriteLine(msg);
+                logHelper.LogInfo(msg);
                 msg = string.Format("Num of In-valid items: {0}", orderDetails.inValidItems.Count);
                 Console.WriteLine(msg);
+                logHelper.LogInfo(msg);
                 foreach (Item item in orderDetails.validItems)
                 {
-                    Console.WriteLine(string.Format("Item Name: {0}, Amount: {1}", item.Name, item.Amount));
+                    msg = string.Format("Item Name: {0}, Amount: {1}", item.Name, item.Amount);
+                    Console.WriteLine(msg);
+                    logHelper.LogInfo(msg);
                 }
                 Console.WriteLine(string.Format("Total Amount {0}", orderDetails.Amount));
                 msg = string.Format("Order # {0} Ended", orderDetails.orderNo);
                 logHelper.LogInfo(msg);
             }
             catch (Exception ex)
-            {
-                logHelper.LogException(LogLevel.Error, ex.Message.ToString(), ex);
-                msg = string.Format("Order # {0} Ended Abruptly", orderDetails.orderNo);
+            {               
+                logHelper.LogException(LogLevel.Error, ex, ex.Message.ToString());
                 logHelper.LogInfo(msg);
             }
             Console.Read();
