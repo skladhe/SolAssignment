@@ -28,11 +28,11 @@ NLog is used for logging.
 # Unit Tests
 All unit test results are uploaded @ URL: https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/AssignLog-UnitTest.txt.log
 # Steps to Build Solution
-1. Download the Codes
+1. Download the Code
 2. Open in Visual Studio 2017. 
 3. Make the settings as mentioned in #Technology Stack
 4. Download the Nuget packages ( if needed)
-5. Create your own SQL Server database. 8
+5. Create your own SQL Server database. Note down the user name and password while creating the database.
 6. Run the script mentioned @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/Database%20Schema%20along%20with%20Master%20Data%20Script.sql
 7. Replace the SQL Server name, database name, User name and password in the connection string of the App.Config file of "ProjAssignment" and "ProjDAL" projects
 
