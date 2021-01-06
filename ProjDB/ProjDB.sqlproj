@@ -65,4 +65,7 @@
     <Build Include="dbo\Tables\ProdDiscounts.sql" />
     <Build Include="dbo\Tables\MastProduct.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="DBSchemaWithData Script.sql" />
+  </ItemGroup>
 </Project>
