@@ -5,7 +5,7 @@
 4. NLOg
 5. Entity Framewor
 6. Language version C# 7.1
-# Solution Architectur
+# Solution Architecture
 8. The solution contains 5 projects as given below.
 	a. ProjAssignment  - This is the main project which contains business logic
 	b. ProjDAL - This project acts as DAL
@@ -16,4 +16,3 @@
    a. The log file is created @ in the {shortdate} folder of "bin" folder of ProjAssignment project
 
 # Unit Tests
-  
