@@ -1,4 +1,5 @@
-# 1. Visual studio 2017 is used to develop this solution
+
+1. Visual studio 2017 is used to develop this solution
 2. .Net framework 7.1
 3. Language version C# 7.1
 	a. ProjAssignment  - This is the main project which contains business logic
