@@ -15,6 +15,8 @@
 9. NLog is used for logging. 
    a. The log file is created @ in the {shortdate} folder of "bin" folder of ProjAssignment project
 
+# Database diagram
+  The database diagram is uploaded @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/EC%20Database%20diagram.PNG
 # Unit Tests
 All unit test results are uploaded @ https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/AssignLog-UnitTest.txt.log
 
