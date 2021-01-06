@@ -6,14 +6,15 @@
 5. Entity Framewor
 6. Language version C# 7.1
 # Solution Architecture
-8. The solution contains 5 projects as given below.
+The solution contains 5 projects as given below.
 	a. ProjAssignment  - This is the main project which contains business logic
 	b. ProjDAL - This project acts as DAL
 	c. ProjDB - This acts as the DB schema project
 	d. ProjSharedLib - This is shared library
 	e. ProjUnitTest - This contains all Unit tests
 9. NLog is used for logging. 
-   a. The log file is created @ in the {shortdate} folder of "bin" folder of ProjAssignment project
+   a. The log file is created in the {shortdate} folder of "bin" folder of ProjAssignment project i.e. "ProjAssignment\bin\2021-01-07" in case of "ProjAssignment" project and 
+   "ProjUnitTest\bin\2021-01-07" - in case of unit tests
 
 # Database diagram
   The database diagram is uploaded @ URL:  https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/EC%20Database%20diagram.PNG
