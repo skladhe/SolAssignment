@@ -24,4 +24,5 @@ NLog is used for logging.
   The database creation script along with the sql statement for master data insertion is given in file https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/Database%20Schema%20along%20with%20Master%20Data%20Script.sql
 # Unit Tests
 All unit test results are uploaded @ URL: https://github.com/skladhe/SolAssignment/blob/master/Miscellaneous/AssignLog-UnitTest.txt.log
+# Steps to Build Solution
 
