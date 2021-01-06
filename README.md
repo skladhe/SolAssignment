@@ -2,6 +2,7 @@
 1. Visual studio 2017 is used to develop this solution
 2. .Net framework 7.1
 3. Language version C# 7.1
+4. The solution contains 5 projects as given below.
 	a. ProjAssignment  - This is the main project which contains business logic
 	b. ProjDAL - This project acts as DAL
 	c. ProjDB - This acts as the DB schema project
