@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="MastProduct">
           <Key>
             <PropertyRef Name="ProdID" />
@@ -38,7 +38,6 @@
           <Property Name="ProdPriceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProdID" Type="int" Nullable="false" />
           <Property Name="BasePrice" Type="numeric" Precision="10" Scale="2" />
-          <Property Name="Currency" Type="varchar" MaxLength="10" />
           <Property Name="PromoOffer" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_ProdDiscounts_ProdID">
@@ -82,8 +81,7 @@
             <End Role="ProdPricing" EntitySet="ProdPricing" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -98,7 +96,7 @@
           <Property Name="UnitOfMeasure" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="UnitOfSales" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ProdDiscounts" Relationship="Self.FK_ProdDiscounts_ProdID" FromRole="MastProduct" ToRole="ProdDiscounts" />
-          <NavigationProperty Name="ProdPricings" Relationship="Self.FK_ProdPricing_ProdID" FromRole="MastProduct" ToRole="ProdPricing" />
+          <NavigationProperty Name="ProdPricings" Relationship="Model.FK_ProdPricing_ProdID" FromRole="MastProduct" ToRole="ProdPricing" />
         </EntityType>
         <EntityType Name="ProdDiscount">
           <Key>
@@ -116,17 +114,6 @@
           <Property Name="DiscPercent" Type="Decimal" Precision="5" Scale="2" />
           <NavigationProperty Name="MastProduct" Relationship="Self.FK_ProdDiscounts_ProdID" FromRole="ProdDiscounts" ToRole="MastProduct" />
         </EntityType>
-        <EntityType Name="ProdPricing">
-          <Key>
-            <PropertyRef Name="ProdPriceID" />
-          </Key>
-          <Property Name="ProdPriceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProdID" Type="Int32" Nullable="false" />
-          <Property Name="BasePrice" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="Currency" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="PromoOffer" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="MastProduct" Relationship="Self.FK_ProdPricing_ProdID" FromRole="ProdPricing" ToRole="MastProduct" />
-        </EntityType>
         <Association Name="FK_ProdDiscounts_ProdID">
           <End Role="MastProduct" Type="Self.MastProduct" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -141,11 +128,34 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="ECModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MastProducts" EntityType="Self.MastProduct" />
+          <EntitySet Name="ProdDiscounts" EntityType="Self.ProdDiscount" />
+          <AssociationSet Name="FK_ProdDiscounts_ProdID" Association="Self.FK_ProdDiscounts_ProdID">
+            <End Role="MastProduct" EntitySet="MastProducts" />
+            <End Role="ProdDiscounts" EntitySet="ProdDiscounts" />
+          </AssociationSet>
+          <EntitySet Name="ProdPricings" EntityType="Model.ProdPricing" />
+          <AssociationSet Name="FK_ProdPricing_ProdID" Association="Model.FK_ProdPricing_ProdID">
+            <End Role="MastProduct" EntitySet="MastProducts" />
+            <End Role="ProdPricing" EntitySet="ProdPricings" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ProdPricing">
+          <Key>
+            <PropertyRef Name="ProdPriceID" />
+          </Key>
+          <Property Name="ProdPriceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="Int32" Nullable="false" />
+          <Property Name="BasePrice" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="PromoOffer" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MastProduct" Relationship="Model.FK_ProdPricing_ProdID" FromRole="ProdPricing" ToRole="MastProduct" />
+        </EntityType>
         <Association Name="FK_ProdPricing_ProdID">
-          <End Role="MastProduct" Type="Self.MastProduct" Multiplicity="1">
+          <End Type="Model.MastProduct" Role="MastProduct" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="ProdPricing" Type="Self.ProdPricing" Multiplicity="*" />
+          <End Type="Model.ProdPricing" Role="ProdPricing" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MastProduct">
               <PropertyRef Name="ProdID" />
@@ -155,19 +165,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ECModel" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="MastProducts" EntityType="Self.MastProduct" />
-          <EntitySet Name="ProdDiscounts" EntityType="Self.ProdDiscount" />
-          <EntitySet Name="ProdPricings" EntityType="Self.ProdPricing" />
-          <AssociationSet Name="FK_ProdDiscounts_ProdID" Association="Self.FK_ProdDiscounts_ProdID">
-            <End Role="MastProduct" EntitySet="MastProducts" />
-            <End Role="ProdDiscounts" EntitySet="ProdDiscounts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProdPricing_ProdID" Association="Self.FK_ProdPricing_ProdID">
-            <End Role="MastProduct" EntitySet="MastProducts" />
-            <End Role="ProdPricing" EntitySet="ProdPricings" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -205,11 +202,10 @@
           <EntitySetMapping Name="ProdPricings">
             <EntityTypeMapping TypeName="Model.ProdPricing">
               <MappingFragment StoreEntitySet="ProdPricing">
-                <ScalarProperty Name="ProdPriceID" ColumnName="ProdPriceID" />
-                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
-                <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
-                <ScalarProperty Name="Currency" ColumnName="Currency" />
                 <ScalarProperty Name="PromoOffer" ColumnName="PromoOffer" />
+                <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdPriceID" ColumnName="ProdPriceID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

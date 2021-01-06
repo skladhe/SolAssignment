@@ -20,7 +20,7 @@ namespace ProjDAL
         {
         }
 
-        public ECModel(string connString)
+          public ECModel(string connString)
             : base(connString)
         {
         }

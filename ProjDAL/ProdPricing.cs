@@ -17,7 +17,6 @@ namespace ProjDAL
         public int ProdPriceID { get; set; }
         public int ProdID { get; set; }
         public Nullable<decimal> BasePrice { get; set; }
-        public string Currency { get; set; }
         public bool PromoOffer { get; set; }
     
         public virtual MastProduct MastProduct { get; set; }

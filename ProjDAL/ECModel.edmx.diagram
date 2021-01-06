@@ -7,9 +7,9 @@
       <Diagram DiagramId="8328b4de7f2a4b4184da53c16a6f44dd" Name="Diagram1">
         <EntityTypeShape EntityType="Model.MastProduct" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ProdDiscount" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.ProdPricing" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_ProdDiscounts_ProdID" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_ProdPricing_ProdID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.ProdPricing" Width="1.5" PointX="3" PointY="5.125" />
+        <AssociationConnector Association="Model.FK_ProdPricing_ProdID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
