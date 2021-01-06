@@ -35,7 +35,7 @@ namespace ProjAssignment
                 prodMast = objEc.MastProducts.ToList<MastProduct>();
                 prodPricing = objEc.ProdPricings.ToList<ProdPricing>();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 logHelper.LogException(LogLevel.Error, ex, ex.Message);
             }
@@ -44,6 +44,9 @@ namespace ProjAssignment
         public long CalAmountAllItems(OrderDetails orderDetails)
         {
             double orderAmount = 0;
+            long roundOffAmount = 0;
+            string msg = string.Format("Order # {0} Amount Calculation Started", orderDetails.orderNo);
+            logHelper.LogInfo(msg);
             try
             {
                 foreach (var item in orderDetails.validItems)
@@ -51,14 +54,22 @@ namespace ProjAssignment
                     string itemName = item.Name;
                     float itemQty = item.Quantity;
                     item.Amount = GetPriceOfEachItem(item.ProdID, itemQty);
+                    msg = string.Format("Item Name: {0}, Amount: {1}", item.Name, item.Amount);
+                    logHelper.LogInfo(msg);
                     orderAmount += item.Amount;
                 }
             }
             catch (Exception ex)
             {
+                logHelper.LogException(LogLevel.Error, ex, ex.Message);
                 throw ex;
             }
-            return Convert.ToInt64(Math.Round(orderAmount));
+            roundOffAmount = Convert.ToInt64(Math.Round(orderAmount));
+            msg = string.Format("Order # {0}  Total Amount = {1}", orderDetails.orderNo, roundOffAmount);
+            logHelper.LogInfo(msg);
+            msg = string.Format("Order # {0} Ended", orderDetails.orderNo);
+            logHelper.LogInfo(msg);
+            return roundOffAmount;
         }
 
 
@@ -69,6 +80,9 @@ namespace ProjAssignment
             string UnitOfSales = string.Empty;
             currentOrder.validItems = new List<Item>();
             currentOrder.inValidItems = new List<Item>();
+
+            msg = string.Format("Order # {0} Validation Started", currentOrder.orderNo);
+            logHelper.LogInfo(msg);
 
             try
             {
@@ -118,6 +132,14 @@ namespace ProjAssignment
                     item.ProdID = intProdId;
                     currentOrder.validItems.Add(item);
                 }
+
+                msg = string.Format(string.Format("Num of valid items: {0}", currentOrder.validItems.Count));
+                logHelper.LogInfo(msg);
+
+                msg = string.Format("Num of In-valid items: {0}", currentOrder.inValidItems.Count);
+                logHelper.LogInfo(msg);
+                msg = string.Format("Order # {0} Validation Ended", currentOrder.orderNo);
+                logHelper.LogInfo(msg);
             }
             catch (Exception ex)
             {

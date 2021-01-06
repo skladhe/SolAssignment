@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace ProjAssignment
 {
-    public class OrderDetails
+    public class OrderDetails 
     {
         public long orderNo;
         public long Amount;
         public List<Item> orderItems;
         public List<Item> validItems;
         public List<Item> inValidItems;
+        private bool isDisposed;
 
         public OrderDetails()
         {
             orderNo = GenerateOrderNo();
             Amount = 0;
             orderItems = new List<Item>();
+            LoggingHelper logHelper = new LoggingHelper();
+            string msg = string.Format("Order # {0} processing started", this.orderNo);
+            logHelper.LogInfo(msg);
         }
 
         public long GenerateOrderNo()
@@ -36,7 +40,7 @@ namespace ProjAssignment
         public float Quantity;
         public double Amount;
         public string Comment;
-        
+
         public Item(string itemName, float itemQuantity)
         {
             this.Name = itemName;

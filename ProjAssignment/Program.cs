@@ -26,26 +26,22 @@ namespace ProjAssignment
                 //orderDetails.orderItems.Add(new Item("Z", 5));
                 orderDetails.orderItems.Add(new Item("B", 8));
                 orderDetails.orderItems.Add(new Item("E", 2.5f));
-                msg = string.Format("Order # {0} started", orderDetails.orderNo);
-                logHelper.LogInfo(msg);
+              
 
                 orderDetails.Amount = price.CalTotalPriceOfOrder(orderDetails);
 
                 msg = string.Format(string.Format("Num of valid items: {0}", orderDetails.validItems.Count));
-                Console.WriteLine(msg);
-                logHelper.LogInfo(msg);
+                Console.WriteLine(msg);            
                 msg = string.Format("Num of In-valid items: {0}", orderDetails.inValidItems.Count);
                 Console.WriteLine(msg);
-                logHelper.LogInfo(msg);
+            
                 foreach (Item item in orderDetails.validItems)
                 {
                     msg = string.Format("Item Name: {0}, Amount: {1}", item.Name, item.Amount);
                     Console.WriteLine(msg);
-                    logHelper.LogInfo(msg);
                 }
                 Console.WriteLine(string.Format("Total Amount {0}", orderDetails.Amount));
-                msg = string.Format("Order # {0} Ended", orderDetails.orderNo);
-                logHelper.LogInfo(msg);
+                
             }
             catch (Exception ex)
             {               
